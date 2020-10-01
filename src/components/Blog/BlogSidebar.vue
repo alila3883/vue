@@ -1,13 +1,23 @@
 <template>
-$END$
+  <div class="sidebar-widgets">
+    {{ title }}
+  </div>
 </template>
 
 <script>
 export default {
-name: "BlogSidebar"
-}
+  data: function() {
+    return {
+      title: "Testing"
+    };
+  },
+  name: "Blog_sidebar",
+  filters: {
+    uppercase: function(v) {
+      return v.toUpperCase();
+    }
+  }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

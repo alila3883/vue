@@ -1,6 +1,4 @@
 // Make UpperCase
-import * as Vue from "core-js";
-
 Vue.filter("uppercase", function(v) {
   return v.toUpperCase();
 });
@@ -11,4 +9,9 @@ Vue.filter("reversing", function(v) {
     .split("")
     .reverse()
     .join("");
+});
+
+// Shorten Text
+Vue.filter("shorten", function(value, textLength, suffix) {
+  return value.substring(0, textLength) + suffix;
 });
